@@ -114,4 +114,32 @@ public class BookDAO {
         }
         return null;
     }
+
+    public List<Book> searchBooks(String keyword) {
+        List<Book> listBook = new ArrayList<>();
+        String sql = "SELECT * FROM book WHERE title LIKE ? OR author LIKE ?";
+
+        try (Connection connection = getConnection();
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+        ) {
+            String searchKeyword = "%" + keyword.trim() + "%";
+            pstmt.setString(1, searchKeyword);
+            pstmt.setString(2, searchKeyword);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    int id = rs.getInt("book_id");
+                    String title = rs.getString("title");
+                    String author = rs.getString("author");
+                    float price = rs.getFloat("price");
+                    listBook.add(new Book(id, title, author, price));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listBook;
+    }
+
+
 }
