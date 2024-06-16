@@ -51,6 +51,10 @@ public class ControllerServlet extends HttpServlet {
                 case "/update":
                     updateBook(request, response);
                     break;
+                case "/search":
+                    searchBook(request, response);
+                    break;
+                case "/list":
                 default:
                     listBook(request, response);
                     break;
@@ -117,4 +121,18 @@ public class ControllerServlet extends HttpServlet {
         response.sendRedirect("list");
 
     }
+
+    private void searchBook(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException, SQLException {
+        String keyword = request.getParameter("keyword");
+        List<Book> listBook = bookDAO.searchBooks(keyword);
+
+        // 검색 결과를 request 객체에 저장합니다.
+        request.setAttribute("listBook", listBook);
+
+        // 검색 결과 페이지로 forward 합니다.
+        RequestDispatcher dispatcher = request.getRequestDispatcher("bookList.jsp");
+        dispatcher.forward(request, response);
+    }
+
 }
