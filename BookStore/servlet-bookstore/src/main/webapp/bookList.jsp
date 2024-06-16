@@ -15,6 +15,10 @@
         </h2>
     </center>
     <div align="center">
+        <form action="<%= request.getContextPath() %>/search" method="get">
+            <input type="text" name="keyword" placeholder="keyword..">
+            <input type="submit" value="Search">
+        </form>
         <table border="1" cellpadding="5">
             <caption><h2>List of Books</h2></caption>
             <tr>
