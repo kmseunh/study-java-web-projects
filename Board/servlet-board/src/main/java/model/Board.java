@@ -9,17 +9,20 @@ public class Board {
     private String writer;
     private String content;
     private Date regdate;
+    private Date last_modified;
     private int cnt;
 
     public Board() {
     }
 
-    public Board(int num, String title, String writer, String content, Date regdate, int cnt) {
+    public Board(int num, String title, String writer, String content, Date regdate,
+        Date last_modified, int cnt) {
         this.num = num;
         this.title = title;
         this.writer = writer;
         this.content = content;
         this.regdate = regdate;
+        this.last_modified = last_modified;
         this.cnt = cnt;
     }
 
@@ -31,12 +34,20 @@ public class Board {
         this.num = num;
     }
 
-    public int getCnt() {
-        return cnt;
+    public String getTitle() {
+        return title;
     }
 
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getWriter() {
+        return writer;
+    }
+
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 
     public String getContent() {
@@ -55,20 +66,19 @@ public class Board {
         this.regdate = regdate;
     }
 
-    public String getWriter() {
-        return writer;
+    public Date getLast_modified() {
+        return last_modified;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setLast_modified(Date last_modified) {
+        this.last_modified = last_modified;
     }
 
-    public String getTitle() {
-        return title;
+    public int getCnt() {
+        return cnt;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCnt(int cnt) {
+        this.cnt = cnt;
     }
-
 }
