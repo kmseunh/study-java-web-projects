@@ -5,6 +5,39 @@
     <head>
         <meta charset="UTF-8">
         <title>Board Detail</title>
+        <style>
+          /* 기본적인 스타일링 */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+          }
+
+          .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          .board-detail h2 {
+            margin-top: 0;
+          }
+
+          .board-detail p {
+            margin: 10px 0;
+          }
+
+          .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+          }
+        </style>
     </head>
     <body>
     <div class="container">
