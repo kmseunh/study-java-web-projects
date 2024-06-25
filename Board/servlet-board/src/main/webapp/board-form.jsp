@@ -5,6 +5,47 @@
     <head>
         <meta charset="UTF-8">
         <title>Board Form</title>
+        <style>
+          /* 기본적인 스타일링 */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+          }
+
+          .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .form-group textarea {
+            height: 100px;
+          }
+
+          .error {
+            color: red;
+          }
+        </style>
     </head>
     <body>
     <div class="container">
