@@ -9,20 +9,20 @@ public class Board {
     private String writer;
     private String content;
     private Date regdate;
-    private Date last_modified;
+    private Date lastModified;
     private int cnt;
 
     public Board() {
     }
 
     public Board(int num, String title, String writer, String content, Date regdate,
-        Date last_modified, int cnt) {
+        Date lastModified, int cnt) {
         this.num = num;
         this.title = title;
         this.writer = writer;
         this.content = content;
         this.regdate = regdate;
-        this.last_modified = last_modified;
+        this.lastModified = lastModified;
         this.cnt = cnt;
     }
 
@@ -66,12 +66,12 @@ public class Board {
         this.regdate = regdate;
     }
 
-    public Date getLast_modified() {
-        return last_modified;
+    public Date getLastModified() {
+        return lastModified;
     }
 
-    public void setLast_modified(Date last_modified) {
-        this.last_modified = last_modified;
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
     }
 
     public int getCnt() {
