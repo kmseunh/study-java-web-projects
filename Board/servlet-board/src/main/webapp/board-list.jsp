@@ -5,6 +5,65 @@
     <head>
         <meta charset="UTF-8">
         <title>Board List</title>
+        <style>
+          /* 기본적인 스타일링 */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+          }
+
+          .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+
+          th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+          }
+
+          th {
+            background-color: #f2f2f2;
+          }
+
+          .btn {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 4px;
+          }
+
+          .btn.edit {
+            background-color: #ffc107;
+          }
+
+          .btn.delete {
+            background-color: #dc3545;
+          }
+
+          .new-btn {
+            margin-bottom: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #28a745;
+            padding: 10px 15px;
+            border-radius: 4px;
+          }
+        </style>
     </head>
     <body>
     <div class="container">
