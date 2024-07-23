@@ -18,7 +18,7 @@ public class DBUtil {
             Class.forName("org.mariadb.jdbc.Driver");
             HikariConfig config = new HikariConfig();
             config.setJdbcUrl("jdbc:mariadb://localhost:3306/study");
-            config.setUsername("root");
+            config.setUsername("kmseunh");
             config.setPassword("1111");
             config.addDataSourceProperty("cachePrepStmts", "true");
             config.addDataSourceProperty("prepStmtCacheSize", "250");
