@@ -44,7 +44,7 @@ public class MemberController extends HttpServlet {
         List<MemberVO> memberList = memberDAO.listMembers();
         req.setAttribute("memberList", memberList);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/listMembers.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/member/listMembers.jsp");
         dispatcher.forward(req, resp);
     }
 }
