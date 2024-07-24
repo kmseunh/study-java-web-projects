@@ -7,6 +7,7 @@
 %>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="./css/comm.css">
         <title>회원 정보 출력창</title>
     </head>
     <body>
