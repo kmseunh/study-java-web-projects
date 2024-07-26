@@ -9,10 +9,11 @@
   <name>BoardServlet Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <!-- JUnit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
 
@@ -32,7 +33,6 @@
       <scope>provided</scope>
     </dependency>
 
-
     <!-- JSTL -->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -45,6 +45,13 @@
       <groupId>org.mariadb.jdbc</groupId>
       <artifactId>mariadb-java-client</artifactId>
       <version>3.4.0</version>
+    </dependency>
+
+    <!-- HikariCP -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>5.1.0</version>
     </dependency>
 
     <!-- SLF4J API -->
@@ -61,7 +68,7 @@
       <version>1.5.6</version>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>BoardServlet</finalName>
-  </build>
-</project>
+<build>
+<finalName>BoardServlet</finalName>
+</build>
+  </project>
