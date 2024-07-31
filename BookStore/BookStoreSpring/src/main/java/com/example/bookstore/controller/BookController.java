@@ -90,6 +90,10 @@ public class BookController {
 
         ModelAndView mav = new ModelAndView();
         mav.addObject("data", list);
+        if (map.containsKey("keyword")) {
+            mav.addObject("keyword", map.get("keyword"));
+        }
+
         mav.setViewName("/book/listBook");
         return mav;
     }
