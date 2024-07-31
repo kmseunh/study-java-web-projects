@@ -1,6 +1,7 @@
 package com.example.bookstore.controller;
 
 import com.example.bookstore.service.BookService;
+import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -80,6 +81,16 @@ public class BookController {
             String bookId = map.get("bookId").toString();
             mav.setViewName("redirect:/detail?bookId=" + bookId);
         }
+        return mav;
+    }
+
+    @RequestMapping(value = "/list")
+    public ModelAndView list(@RequestParam Map<String, Object> map) {
+        List<Map<String, Object>> list = this.bookService.list(map);
+
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("data", list);
+        mav.setViewName("/book/listBook");
         return mav;
     }
 }
