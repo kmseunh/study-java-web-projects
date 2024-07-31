@@ -72,6 +72,13 @@
       <artifactId>mariadb-java-client</artifactId>
       <version>3.4.1</version>
     </dependency>
+
+    <!-- JSTL -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>BookStoreSpring</finalName>
