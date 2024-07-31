@@ -30,4 +30,9 @@ public class BookServiceImpl implements BookService {
         int affectRowCount = this.bookDAO.update(map);
         return affectRowCount == 1;
     }
+
+    public boolean remove(Map<String, Object> map) {
+        int affectRowCount = this.bookDAO.delete(map);
+        return affectRowCount == 1;
+    }
 }
