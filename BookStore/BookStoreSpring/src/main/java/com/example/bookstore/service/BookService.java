@@ -1,5 +1,6 @@
 package com.example.bookstore.service;
 
+import java.util.List;
 import java.util.Map;
 
 public interface BookService {
@@ -11,4 +12,6 @@ public interface BookService {
     boolean edit(Map<String, Object> map);
 
     boolean remove(Map<String, Object> map);
+
+    List<Map<String, Object>> list(Map<String, Object> map);
 }
