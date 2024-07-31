@@ -13,14 +13,14 @@
         <p>입력일: <fmt:formatDate value="${data.insert_date}" pattern="yyyy.MM.dd HH:mm:ss"/></p>
 
         <p>
-            <a href="/update?bookId=${bookId}">수정</a>
+            <a href="${pageContext.request.contextPath}/update?bookId=${bookId}">수정</a>
         </p>
         <form method="POST" action="${pageContext.request.contextPath}/delete">
             <input type="hidden" name="bookId" value="${bookId}"/>
             <input type="submit" value="삭제"/>
         </form>
         <p>
-            <a href="/list">목록으로</a>
+            <a href="${pageContext.request.contextPath}/list">목록으로</a>
         </p>
     </body>
 </html>
