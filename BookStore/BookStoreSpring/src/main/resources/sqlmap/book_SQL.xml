@@ -34,6 +34,15 @@
     <![CDATA[
     delete
     from book
-    where book_id = #{bookId}]]>
+    where book_id = #{bookId}
+    ]]>
   </delete>
+
+  <select id="select_list" parameterType="hashMap" resultType="hashMap">
+    <![CDATA[
+    select *
+    from book
+    order by insert_date desc
+    ]]>
+  </select>
 </mapper>
