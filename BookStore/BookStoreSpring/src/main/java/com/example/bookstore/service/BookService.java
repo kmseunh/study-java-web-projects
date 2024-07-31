@@ -1,5 +1,8 @@
 package com.example.bookstore.service;
 
-public class BookService {
+import java.util.Map;
 
+public interface BookService {
+
+    String create(Map<String, Object> map);
 }
