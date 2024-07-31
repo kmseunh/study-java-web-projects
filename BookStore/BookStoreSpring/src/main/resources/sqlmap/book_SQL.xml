@@ -12,4 +12,12 @@
     ]]>
   </insert>
 
+  <select id="select_detail" parameterType="hashMap" resultType="hashMap">
+    <![CDATA[
+    select *
+    from book
+    where book_id = #{bookId}
+    ]]>
+  </select>
+
 </mapper>
