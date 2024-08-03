@@ -5,13 +5,20 @@
 
   <!-- Root Context: defines shared resources visible to all other web components -->
 
-  <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
-    destroy-method="close">
+  <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
     <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
-    <property name="url"
+    <property name="jdbcUrl"
       value="jdbc:mariadb://localhost:3306/study?serverTimezone=UTC&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
     <property name="username" value="kmseunh"/>
     <property name="password" value="1111"/>
+    <property name="maximumPoolSize" value="20"/>
+    <property name="minimumIdle" value="10"/>
+    <property name="connectionTimeout" value="20000"/>
+    <property name="idleTimeout" value="300000"/>
+  </bean>
+
+  <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+    <constructor-arg ref="hikariConfig"/>
   </bean>
 
   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
